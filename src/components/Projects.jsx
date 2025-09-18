@@ -1,155 +1,129 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { FaTimes, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from 'react'
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  
+  const [selectedProject, setSelectedProject] = useState(null)
+
   const projects = [
     {
       id: 1,
-      title: 'E-commerce App',
-      image: '/projetos/projeto1.jpg',
-      description: 'Aplicação completa de e-commerce com React, Node.js e MongoDB. Inclui sistema de pagamentos, carrinho e painel administrativo.',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      image: '/ACENDERLED.png',
+      title: 'Circuito Eletrônico - Acender LED',
+      description: 'Projeto de circuito eletrônico desenvolvido no Tinkercad para acionamento de LED. Demonstra conceitos básicos de eletrônica, incluindo uso de resistores, botões e fontes de energia. O projeto simula o funcionamento de um circuito simples com componente luminoso, ideal para introdução à eletrônica digital.'
     },
     {
       id: 2,
-      title: 'Dashboard Analytics',
-      image: '/projetos/projeto2.jpg',
-      description: 'Dashboard interativo para visualização de dados analíticos com gráficos e filtros avançados.',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      image: '/AJUDAIDOSOTELA.png',
+      title: 'Projeto de Conclusão de Curso - Ajuda ao Idoso',
+      description: 'Aplicativo mobile desenvolvido no MIT App Inventor como Trabalho de Conclusão de Curso. A solução oferece lembretes personalizados para medicamentos, destinado a idosos e pessoas com deficiência. Inclui funcionalidades como alertas sonoros, interface acessível com botões grandes e recursos de emergência para situações críticas.'
     },
     {
       id: 3,
-      title: 'App de Finanças',
-      image: '/projetos/projeto1.jpg',
-      description: 'Aplicativo para controle financeiro pessoal com categorização de gastos e relatórios.',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      image: '/CALCULADORA.png',
+      title: 'Calculadora em Linguagem C',
+      description: 'Software desenvolvido em linguagem C com funcionalidades avançadas de cálculo. Implementa operações básicas (soma, subtração) e avançadas (divisão, resto da divisão) com tratamento de erros, incluindo verificação de divisão por zero. Interface de linha de comando intuitiva com mensagens descritivas em português.'
     },
     {
       id: 4,
-      title: 'Rede Social',
-      image: '/projetos/projeto2.jpg',
-      description: 'Plataforma de rede social com recursos de postagens, comentários e perfis de usuário.',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      image: '/CATRACA.png',
+      title: 'Circuito Eletrônico - Sistema de Catraca',
+      description: 'Sistema de controle de acesso baseado em Arduino UNO, simulando o funcionamento de uma catraca eletrônica. Desenvolvido no Tinkercad, o projeto incorpora sensores, atuadores e lógica de programação para automação de controle de fluxo de pessoas, com indicadores visuais de status.'
     },
     {
       id: 5,
-      title: 'App de Tarefas',
-      image: '/projetos/projeto1.jpg',
-      description: 'Aplicativo de gerenciamento de tarefas com recursos de priorização e categorias.',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      image: '/CLIMATELA.png',
+      title: 'Aplicativo Mobile - Previsão do Tempo',
+      description: 'Aplicativo meteorológico desenvolvido no MIT App Inventor com integração de API de previsão do tempo. Apresenta interface intuitiva com dados em tempo real, localização automática e exibição de temperatura em diferentes escalas. Projeto educativo para aprendizado de consumo de APIs RESTful em aplicações mobile.'
     },
     {
       id: 6,
-      title: 'Blog Pessoal',
-      image: '/projetos/projeto2.jpg',
-      description: 'Blog com sistema de gerenciamento de conteúdo personalizado.',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
+      image: '/FOLHETO PESQ.jpeg',
+      title: 'STRONG PLANTS - Projeto de Pesquisa 2023',
+      description: 'Projeto abrangente de desenvolvimento de marca e materiais promocionais para sistema de horta inteligente. Inclui criação de identidade visual, site responsivo, folhetos informativos, banners e presença nas redes sociais. Destaque para os benefícios de alimentos naturais sem agrotóxicos, economia de espaço e sistema automatizado de irrigação.'
+    },
+    {
+      id: 7,
+      image: '/média.png',
+      title: 'Algoritmo em C - Cálculo de Média',
+      description: 'Algoritmo desenvolvido em linguagem C para cálculo de média aritmética de três notas. Demonstra conceitos fundamentais de programação como entrada/saída de dados, variáveis, operadores aritméticos e formatação de resultados. Interface amigável em português com prompts claros para o usuário.'
+    },
+    {
+      id: 8,
+      image: '/par ou ímpar.png',
+      title: 'Algoritmo em C - Verificação Par/Ímpar',
+      description: 'Programa em linguagem C para determinação de paridade numérica (números pares ou ímpares). Utiliza operador módulo (%) para verificação matemática, demonstrando aplicação prática de operadores aritméticos e estruturas condicionais (if-else) em programação básica.'
+    },
+    {
+      id: 9,
+      image: '/primos.png',
+      title: 'Algoritmo em C - Números Primos',
+      description: 'Algoritmo avançado em linguagem C para identificação de números primos. Implementa otimização matemática verificando divisibilidade apenas até a metade do número (n/2). Inclui tratamento de casos especiais e retorno informativo sobre a primalidade do número testado.'
+    },
+    {
+      id: 10,
+      image: '/SEMAFARO.png',
+      title: 'Circuito Eletrônico - Semáforo Interativo',
+      description: 'Sistema completo de semáforo inteligente desenvolvido com Arduino. Inclui temporização programável, botão para pedestres solicitarem travessia, e transição segura entre estados (vermelho, amarelo, verde). Projeto demonstra aplicação prática de microcontroladores em soluções de tráfego e segurança urbana.'
     }
-  ];
-
-  const openModal = (project) => {
-    setSelectedProject(project);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    document.body.style.overflow = 'auto';
-  };
+  ]
 
   return (
-    <section id="projetos" className="py-16">
-      <div className="container">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="section-title mb-0">Projetos</h2>
-          <span className="text-gray-500">1/{projects.length}</span>
-        </div>
+    <section id="projects" className="py-12 bg-neutro-fundo">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-azul-escuro mb-8">Projetos</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {projects.map((project) => (
             <div 
-              key={project.id}
-              className="group relative overflow-hidden rounded-lg shadow-md cursor-pointer"
-              onClick={() => openModal(project)}
+              key={project.id} 
+              className="bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              onClick={() => setSelectedProject(project)}
             >
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4 w-full">
-                  <h3 className="text-white text-xl font-bold">{project.title}</h3>
-                  <p className="text-white/80 text-sm mt-1">Clique para ver detalhes</p>
-                </div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-base font-semibold text-azul-escuro text-center leading-tight">{project.title}</h3>
               </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
-          <div className="relative w-full max-w-4xl bg-white rounded-lg shadow-xl overflow-hidden">
-            <button 
-              className="absolute top-4 right-4 text-white hover:text-gray-200 z-10"
-              onClick={closeModal}
+        {selectedProject && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
+            onClick={() => setSelectedProject(null)}
+          >
+            <div 
+              className="bg-white rounded-xl max-w-4xl w-full overflow-hidden max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
             >
-              <FaTimes size={24} />
-            </button>
-            
-            <div className="h-[50vh] bg-gray-900">
-              <img 
-                src={selectedProject.image} 
-                alt={selectedProject.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-secondary mb-2">{selectedProject.title}</h3>
-              <p className="text-gray-600 mb-6">{selectedProject.description}</p>
-              
-              <div className="flex space-x-4">
-                <a 
-                  href={selectedProject.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors"
+              <div className="relative">
+                <button 
+                  onClick={() => setSelectedProject(null)} 
+                  className="absolute top-4 right-4 text-white bg-azul-escuro rounded-full w-10 h-10 flex items-center justify-center z-10 hover:bg-dourado transition-colors"
                 >
-                  <FaGithub className="mr-2" />
-                  Código
-                </a>
-                <a 
-                  href={selectedProject.demo} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
-                >
-                  <FaExternalLinkAlt className="mr-2" />
-                  Demo
-                </a>
+                  X
+                </button>
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  className="w-full h-72 object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-azul-escuro mb-4 border-b border-dourado pb-2">{selectedProject.title}</h3>
+                <p className="text-neutro-texto leading-relaxed">{selectedProject.description}</p>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

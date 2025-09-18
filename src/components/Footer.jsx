@@ -31,7 +31,7 @@ const Footer = () => {
           
           {/* Copyright */}
           <p className="text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} Ryan Pablo. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Michelle Marcondes. Todos os direitos reservados.
           </p>
           
           {/* Links */}

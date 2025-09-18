@@ -22,19 +22,19 @@ const About = () => {
           {/* Texto */}
           <div className="space-y-4 text-gray-700">
             <p>
-              Olá! Sou <strong>Ryan Pablo</strong>, um desenvolvedor web apaixonado por criar experiências digitais impactantes e funcionais. Minha jornada na tecnologia começou há mais de 5 anos, quando descobri o poder de transformar ideias em soluções reais através do código.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
             
             <p>
-              Especializo-me em <strong>desenvolvimento front-end</strong> com foco em React, mas também tenho experiência sólida com tecnologias back-end. Acredito que a melhor experiência do usuário vem da combinação perfeita entre design atraente e funcionalidade intuitiva.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
             
             <p>
-              Além da programação, sou entusiasta de <strong>UI/UX Design</strong> e sempre busco incorporar princípios de design centrado no usuário em meus projetos. Meu objetivo é criar interfaces que não apenas pareçam boas, mas que também proporcionem uma experiência fluida e agradável.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. .
             </p>
             
             <p>
-              Quando não estou codificando, gosto de explorar novas tecnologias, contribuir para projetos open-source e compartilhar conhecimento com a comunidade. Acredito fortemente no aprendizado contínuo e estou sempre em busca de novos desafios para expandir minhas habilidades.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
           </div>
         </div>

@@ -27,11 +27,13 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 shadow-md' : 'bg-transparent'}`}>
       <div className="container flex items-center justify-between py-4">
         {/* Logo (placeholder) */}
-        <div className="flex items-center">
-          <div className="h-[50px] w-[150px] bg-gradient-to-r from-primary to-highlight rounded-lg flex items-center justify-center text-white font-bold text-xl">
-            RYAN P.
-          </div>
-        </div>
+      <div className="flex items-center">
+        <img 
+          src="ryanlogo.png" 
+          alt="Logo" 
+          className="h-[50px] w-[150px] object-contain"
+        />
+      </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">

@@ -11,10 +11,10 @@ const Hero = () => {
             Ryan Pablo
           </h1>
           <p className="text-xl md:text-2xl text-secondary mb-6">
-            Desenvolvedor Web & Designer UI/UX
+            Estudante Fundação Bradesco - Campinas
           </p>
           <p className="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-            Criando experiências digitais impactantes e soluções web inovadoras para transformar ideias em realidade.
+            Eu sou um paragrafo - Texto que não me mandaram.
           </p>
           <a href="#projetos" className="btn btn-primary">
             Ver Projetos
