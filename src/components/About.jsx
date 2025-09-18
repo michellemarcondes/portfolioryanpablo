@@ -13,7 +13,7 @@ const About = () => {
           {/* Imagem */}
           <div className="flex justify-center">
             <img 
-              src="/sobre-mim.jpg" 
+              src="perfilteste.jpg" 
               alt="Ryan Pablo" 
               className="w-full max-w-md rounded-lg shadow-lg"
             />

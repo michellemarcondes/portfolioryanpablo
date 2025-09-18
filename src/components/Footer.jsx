@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col items-center">
           {/* Logo */}
-          <img src="/logo.png" alt="Ryan Pablo Logo" className="h-10 mb-4" />
+          <img src="ryanlogo.png" alt="Ryan Pablo Logo" className="h-10 mb-4" />
           
           {/* Social Icons */}
           <div className="flex space-x-4 mb-4">

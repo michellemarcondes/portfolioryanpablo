@@ -27,7 +27,7 @@ const Header = () => {
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
         <div className="flex items-center">
-          <img src="/logo.png" alt="Ryan Pablo Logo" className="h-[50px]" />
+          <img src="ryanlogo.png" alt="Ryan Pablo Logo" className="h-[50px]" />
         </div>
 
         {/* Desktop Navigation */}

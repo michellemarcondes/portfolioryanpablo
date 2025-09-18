@@ -45,7 +45,7 @@ const Contact = () => {
           {/* Imagem e Informações */}
           <div className="space-y-8">
             <img 
-              src="/contato.jpg" 
+              src="perfilteste.jpg" 
               alt="Contato" 
               className="w-full rounded-lg shadow-md"
             />
