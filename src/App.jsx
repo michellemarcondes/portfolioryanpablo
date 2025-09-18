@@ -1,3 +1,4 @@
+// src/App.jsx
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -27,12 +28,12 @@ function App() {
       { threshold: 0.1 }
     );
 
-    document.querySelectorAll('[data-aos]').forEach((el) => {
+    document.querySelectorAll('section').forEach((el) => {
       observer.observe(el);
     });
 
     return () => {
-      document.querySelectorAll('[data-aos]').forEach((el) => {
+      document.querySelectorAll('section').forEach((el) => {
         observer.unobserve(el);
       });
     };

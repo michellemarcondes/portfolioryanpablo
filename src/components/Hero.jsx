@@ -1,3 +1,4 @@
+// src/components/Hero.jsx
 import React from 'react';
 
 const Hero = () => {
@@ -34,14 +35,12 @@ const Hero = () => {
             <div className="absolute bottom-1/3 right-1/3 w-16 h-0.5 bg-highlight/20 -rotate-45"></div>
           </div>
           
-          {/* Foto de perfil */}
+          {/* Foto de perfil (placeholder) */}
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-highlight opacity-20 blur-md"></div>
-            <img 
-              src="perfilteste.jpg" 
-              alt="Ryan Pablo" 
-              className="relative w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
-            />
+            <div className="relative w-full h-full bg-gradient-to-br from-primary to-highlight rounded-full flex items-center justify-center text-white text-6xl font-bold">
+              RP
+            </div>
           </div>
         </div>
       </div>

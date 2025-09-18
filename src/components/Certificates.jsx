@@ -4,16 +4,16 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaFilePdf } from 'react-icons/fa';
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
   
   const certificates = [
-    { id: 1, title: 'React Avançado', image: '/certificados/certificado1.pdf' },
-    { id: 2, title: 'UI/UX Design', image: '/certificados/certificado2.pdf' },
-    { id: 3, title: 'Node.js Completo', image: '/certificados/certificado1.pdf' },
-    { id: 4, title: 'TypeScript Profissional', image: '/certificados/certificado2.pdf' },
+    { id: 1, title: 'React Avançado', file: '/certificados/certificado1.pdf' },
+    { id: 2, title: 'UI/UX Design', file: '/certificados/certificado2.pdf' },
+    { id: 3, title: 'Node.js Completo', file: '/certificados/certificado1.pdf' },
+    { id: 4, title: 'TypeScript Profissional', file: '/certificados/certificado2.pdf' },
   ];
 
   const openModal = (certificate) => {
@@ -51,11 +51,7 @@ const Certificates = () => {
                 onClick={() => openModal(certificate)}
               >
                 <div className="aspect-[3/2] bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-                  <img 
-                    src={certificate.image} 
-                    alt={certificate.title}
-                    className="w-full h-full object-cover rounded-md"
-                  />
+                  <FaFilePdf className="text-4xl text-gray-500" />
                 </div>
                 <h3 className="text-lg font-semibold text-center text-secondary">{certificate.title}</h3>
               </div>
@@ -75,12 +71,25 @@ const Certificates = () => {
               <FaTimes size={24} />
             </button>
             
-            <div className="p-2 h-[80vh]">
-              <iframe 
-                src={selectedCertificate.image} 
-                title={selectedCertificate.title}
-                className="w-full h-full"
-              />
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-secondary mb-4">{selectedCertificate.title}</h3>
+              <div className="h-96">
+                <iframe 
+                  src={selectedCertificate.file} 
+                  title={selectedCertificate.title}
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-center">
+                <a 
+                  href={selectedCertificate.file} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Abrir em nova aba
+                </a>
+              </div>
             </div>
           </div>
         </div>

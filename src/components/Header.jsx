@@ -1,3 +1,4 @@
+// src/components/Header.jsx
 import { useState, useEffect } from 'react';
 import { FaInstagram, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 
@@ -25,19 +26,21 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 shadow-md' : 'bg-transparent'}`}>
       <div className="container flex items-center justify-between py-4">
-        {/* Logo */}
+        {/* Logo (placeholder) */}
         <div className="flex items-center">
-          <img src="ryanlogo.png" alt="Ryan Pablo Logo" className="h-[50px]" />
+          <div className="h-[50px] w-[150px] bg-gradient-to-r from-primary to-highlight rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            RYAN P.
+          </div>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#inicio" className="text-secondary hover:text-primary transition duration-300">Início</a>
-          <a href="#sobre" className="text-secondary hover:text-primary transition duration-300">Sobre</a>
-          <a href="#experiencia" className="text-secondary hover:text-primary transition duration-300">Experiência</a>
-          <a href="#certificados" className="text-secondary hover:text-primary transition duration-300">Certificados</a>
-          <a href="#projetos" className="text-secondary hover:text-primary transition duration-300">Projetos</a>
-          <a href="#contato" className="text-secondary hover:text-primary transition duration-300">Contato</a>
+          <a href="#inicio" className="nav-link text-secondary">Início</a>
+          <a href="#sobre" className="nav-link text-secondary">Sobre</a>
+          <a href="#experiencia" className="nav-link text-secondary">Experiência</a>
+          <a href="#certificados" className="nav-link text-secondary">Certificados</a>
+          <a href="#projetos" className="nav-link text-secondary">Projetos</a>
+          <a href="#contato" className="nav-link text-secondary">Contato</a>
         </nav>
 
         {/* Social Icons and CV Button */}
@@ -48,7 +51,7 @@ const Header = () => {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary hover:scale-110 transition duration-300">
             <FaLinkedin size={20} />
           </a>
-          <a href="/curriculo.pdf" download className="btn btn-highlight ml-4">
+          <a href="#" className="btn btn-highlight ml-4">
             Baixar Currículo
           </a>
         </div>
@@ -76,7 +79,7 @@ const Header = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:text-primary transition duration-300">
               <FaLinkedin size={20} />
             </a>
-            <a href="/curriculo.pdf" download className="btn btn-highlight ml-4">
+            <a href="#" className="btn btn-highlight ml-4">
               Baixar Currículo
             </a>
           </div>
