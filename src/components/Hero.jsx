@@ -14,7 +14,10 @@ const Hero = () => {
             Estudante Fundação Bradesco - Campinas
           </p>
           <p className="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
-            Eu sou um paragrafo - Texto que não me mandaram.
+            Estudante e Futuro Profissional de Tecnologia
+          </p>
+          <p className="text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+            Combinando conhecimento acadêmico da Fundação Bradesco com dedicação e vontade de inovar.
           </p>
           <a href="#projetos" className="btn btn-primary">
             Ver Projetos

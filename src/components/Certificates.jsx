@@ -16,6 +16,14 @@ const Certificates = () => {
     { id: 4, title: 'Certificado Lógica de Programação', file: 'logica.png' },
   ];
 
+  // Função para construir o caminho correto da imagem
+  const getImagePath = (imageName) => {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      return `/${imageName}`;
+    }
+    return imageName;
+  };
+
   const openModal = (certificate) => {
     setSelectedCertificate(certificate);
     document.body.style.overflow = 'hidden';
@@ -52,9 +60,12 @@ const Certificates = () => {
               >
                 <div className="aspect-[3/2] bg-gray-200 rounded-md mb-4 flex items-center justify-center overflow-hidden">
                   <img
-                    src={`/${certificate.file}`}
+                    src={getImagePath(certificate.file)}
                     alt={certificate.title}
                     className="w-full h-full object-contain rounded-md"
+                    onError={(e) => {
+                      e.target.src = 'https://via.placeholder.com/300x200?text=Certificado+não+encontrado';
+                    }}
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-center text-secondary">{certificate.title}</h3>
@@ -77,16 +88,19 @@ const Certificates = () => {
             
             <div className="p-6">
               <h3 className="text-2xl font-bold text-secondary mb-4">{selectedCertificate.title}</h3>
-              <div className="h-96">
-                <iframe
-                  src={`/${selectedCertificate.file}`}
-                  title={selectedCertificate.title}
-                  className="w-full h-full"
+              <div className="h-96 flex items-center justify-center">
+                <img
+                  src={getImagePath(selectedCertificate.file)}
+                  alt={selectedCertificate.title}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/800x600?text=Certificado+não+encontrado';
+                  }}
                 />
               </div>
               <div className="mt-4 flex justify-center">
                 <a
-                  href={`/${selectedCertificate.file}`}
+                  href={getImagePath(selectedCertificate.file)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"

@@ -22,19 +22,15 @@ const About = () => {
           {/* Texto */}
           <div className="space-y-4 text-gray-700">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Sou Ryan Pablo, um estudante do Ensino Médio da Fundação Bradesco com uma paixão genuína por tecnologia e um forte desejo de transformar ideias em soluções práticas. Minha trajetória acadêmica é impulsionada pela curiosidade e pela busca constante por conhecimento, sempre buscando conectar os conceitos aprendidos em sala de aula com as aplicações do mundo real. Acredito que a base educacional sólida e os valores de responsabilidade social que a Fundação Bradesco me proporcionou são os pilares para minha carreira futura.
             </p>
             
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              Durante meu percurso, desenvolvi não apenas competências técnicas, mas também habilidades interpessoais essenciais. Participei ativamente de projetos em grupo, onde pude exercitar minha comunicação, trabalho em equipe e capacidade de liderança para alcançar objetivos comuns. Essas experiências me ensinaram a importância da colaboração, da adaptabilidade e da perseverança diante de novos desafios, preparando-me para um ambiente profissional dinâmico e competitivo.
             </p>
             
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. .
-            </p>
-            
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              Busco agora minha primeira oportunidade no mercado de trabalho para aplicar todo o conhecimento adquirido, contribuir com minha energia e dedicação, e continuar evoluindo tanto profissional quanto pessoalmente. Meu objetivo é me integrar a uma equipe inovadora onde eu possa aprender, crescer e, ao mesmo tempo, agregar valor através do meu comprometimento e vontade de fazer a diferença.
             </p>
           </div>
         </div>
