@@ -52,7 +52,7 @@ const Certificates = () => {
               >
                 <div className="aspect-[3/2] bg-gray-200 rounded-md mb-4 flex items-center justify-center overflow-hidden">
                   <img
-                    src={`${import.meta.env.BASE_URL}${certificate.file}`}
+                    src={`/${certificate.file}`}
                     alt={certificate.title}
                     className="w-full h-full object-contain rounded-md"
                   />
@@ -77,16 +77,16 @@ const Certificates = () => {
             
             <div className="p-6">
               <h3 className="text-2xl font-bold text-secondary mb-4">{selectedCertificate.title}</h3>
-              <div className="h-96 flex items-center justify-center">
-                <img
-                  src={`${import.meta.env.BASE_URL}${selectedCertificate.file}`}
-                  alt={selectedCertificate.title}
-                  className="max-w-full max-h-full object-contain"
+              <div className="h-96">
+                <iframe
+                  src={`/${selectedCertificate.file}`}
+                  title={selectedCertificate.title}
+                  className="w-full h-full"
                 />
               </div>
               <div className="mt-4 flex justify-center">
                 <a
-                  href={`${import.meta.env.BASE_URL}${selectedCertificate.file}`}
+                  href={`/${selectedCertificate.file}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"

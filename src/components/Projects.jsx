@@ -36,19 +36,19 @@ const Projects = () => {
     },
     {
       id: 6,
-      image: '/FOLHETO%20PESQ.jpeg',
+      image: '/FOLHETO PESQ.jpeg',
       title: 'STRONG PLANTS - Projeto de Pesquisa 2023',
       description: 'Projeto abrangente de desenvolvimento de marca e materiais promocionais para sistema de horta inteligente. Inclui criação de identidade visual, site responsivo, folhetos informativos, banners e presença nas redes sociais. Destaque para os benefícios de alimentos naturais sem agrotóxicos, economia de espaço e sistema automatizado de irrigação.'
     },
     {
       id: 7,
-      image: '/m%C3%A9dia.png',
+      image: '/média.png',
       title: 'Algoritmo em C - Cálculo de Média',
       description: 'Algoritmo desenvolvido em linguagem C para cálculo de média aritmética de três notas. Demonstra conceitos fundamentais de programação como entrada/saída de dados, variáveis, operadores aritméticos e formatação de resultados. Interface amigável em português com prompts claros para o usuário.'
     },
     {
       id: 8,
-      image: '/par%20ou%20%C3%ADmpar.png',
+      image: '/par ou ímpar.png',
       title: 'Algoritmo em C - Verificação Par/Ímpar',
       description: 'Programa em linguagem C para determinação de paridade numérica (números pares ou ímpares). Utiliza operador módulo (%) para verificação matemática, demonstrando aplicação prática de operadores aritméticos e estruturas condicionais (if-else) em programação básica.'
     },
@@ -79,8 +79,8 @@ const Projects = () => {
               onClick={() => setSelectedProject(project)}
             >
               <div className="h-48 overflow-hidden">
-                <img
-                  src={`${import.meta.env.BASE_URL}${project.image.slice(1)}`}
+                <img 
+                  src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
@@ -108,8 +108,8 @@ const Projects = () => {
                 >
                   X
                 </button>
-                <img
-                  src={`${import.meta.env.BASE_URL}${selectedProject.image.slice(1)}`}
+                <img 
+                  src={selectedProject.image} 
                   alt={selectedProject.title}
                   className="w-full h-72 object-cover"
                 />
