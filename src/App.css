@@ -47,6 +47,17 @@
   background-color: #2563EB !important;
 }
 
+/* Override Swiper CSS to fix minification warnings */
+.swiper-button-prev :is(svg),
+.swiper-button-next :is(svg) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+  fill: currentColor;
+  pointer-events: none;
+}
+
 /* Estilos adicionais */
 html {
   scroll-behavior: smooth;
