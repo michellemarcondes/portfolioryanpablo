@@ -4,16 +4,16 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { FaTimes, FaFilePdf } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 const Certificates = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
   
   const certificates = [
-    { id: 1, title: 'React Avançado', file: '/certificados/certificado1.pdf' },
-    { id: 2, title: 'UI/UX Design', file: '/certificados/certificado2.pdf' },
-    { id: 3, title: 'Node.js Completo', file: '/certificados/certificado1.pdf' },
-    { id: 4, title: 'TypeScript Profissional', file: '/certificados/certificado2.pdf' },
+    { id: 1, title: 'Certificado CC50 Harvard', file: 'certharvard.png' },
+    { id: 2, title: 'Certificado HTML', file: 'htmlcert.png' },
+    { id: 3, title: 'Certificado JavaScript', file: 'jscert.png' },
+    { id: 4, title: 'Certificado Lógica de Programação', file: 'logica.png' },
   ];
 
   const openModal = (certificate) => {
@@ -50,8 +50,12 @@ const Certificates = () => {
                 className="bg-white p-4 rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105"
                 onClick={() => openModal(certificate)}
               >
-                <div className="aspect-[3/2] bg-gray-200 rounded-md mb-4 flex items-center justify-center">
-                  <FaFilePdf className="text-4xl text-gray-500" />
+                <div className="aspect-[3/2] bg-gray-200 rounded-md mb-4 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={`/${certificate.file}`}
+                    alt={certificate.title}
+                    className="w-full h-full object-contain rounded-md"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-center text-secondary">{certificate.title}</h3>
               </div>

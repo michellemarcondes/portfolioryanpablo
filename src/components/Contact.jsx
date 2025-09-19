@@ -45,7 +45,7 @@ const Contact = () => {
           {/* Imagem e Informações */}
           <div className="space-y-8">
             <img 
-              src="perfilteste.jpg" 
+              src="sala.jpg" 
               alt="Contato" 
               className="w-full rounded-lg shadow-md"
             />
@@ -58,7 +58,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-secondary">Email</h3>
                   <a href="mailto:contato@ryanpablo.com" className="text-gray-600 hover:text-primary">
-                    contato@ryanpablo.com
+                    35517.14@educacao.org.br
                   </a>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-secondary">Telefone</h3>
                   <a href="tel:+5511999999999" className="text-gray-600 hover:text-primary">
-                    +55 (11) 99999-9999
+                    +55 (19) 994479321
                   </a>
                 </div>
               </div>
